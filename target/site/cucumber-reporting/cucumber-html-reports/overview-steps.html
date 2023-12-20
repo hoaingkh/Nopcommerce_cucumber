@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>SELENIUM ONLINE - NOPCOMMERCE</td>
+              <td>1</td>
+            <td>15 Nov 2023, 19:50</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Duration</th>
+            <th>Average</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">stepDefinitions.CommonSteps.waitForSecond(int)</td>
+              <td>13</td>
+              <td class="duration" data-value="27088171400">27s 088ms</td>
+              <td class="duration" data-value="2083705492">2s 083ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">stepDefinitions.RegisterStepDefinitions.clickToRegisterButton()</td>
+              <td>6</td>
+              <td class="duration" data-value="2000677300">2s</td>
+              <td class="duration" data-value="333446216">333ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">stepDefinitions.RegisterStepDefinitions.clickToRegisterLink()</td>
+              <td>6</td>
+              <td class="duration" data-value="7581115400">7s 581ms</td>
+              <td class="duration" data-value="1263519233">1s 263ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">stepDefinitions.RegisterStepDefinitions.inputInfoForRequiredFields(io.cucumber.datatable.DataTable)</td>
+              <td>4</td>
+              <td class="duration" data-value="1719006700">1s 719ms</td>
+              <td class="duration" data-value="429751675">429ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">stepDefinitions.RegisterStepDefinitions.inputValueToConfirmPassword(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="85515600">085ms</td>
+              <td class="duration" data-value="85515600">085ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">stepDefinitions.RegisterStepDefinitions.inputValueToEmail(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="81001300">081ms</td>
+              <td class="duration" data-value="81001300">081ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">stepDefinitions.RegisterStepDefinitions.inputValueToFirstName(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="106002300">106ms</td>
+              <td class="duration" data-value="106002300">106ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">stepDefinitions.RegisterStepDefinitions.inputValueToLastName(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="103994000">103ms</td>
+              <td class="duration" data-value="103994000">103ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">stepDefinitions.RegisterStepDefinitions.inputValueToPassword(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="86024200">086ms</td>
+              <td class="duration" data-value="86024200">086ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">stepDefinitions.RegisterStepDefinitions.verifyErrorMessageAtConfirmPasswordField(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="45003800">045ms</td>
+              <td class="duration" data-value="45003800">045ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">stepDefinitions.RegisterStepDefinitions.verifyErrorMessageAtEmailField(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="213968700">213ms</td>
+              <td class="duration" data-value="42793740">042ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">stepDefinitions.RegisterStepDefinitions.verifyErrorMessageAtFirstNameField(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="61031500">061ms</td>
+              <td class="duration" data-value="61031500">061ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">stepDefinitions.RegisterStepDefinitions.verifyErrorMessageAtLastNameField(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="50999200">050ms</td>
+              <td class="duration" data-value="50999200">050ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">stepDefinitions.RegisterStepDefinitions.verifyErrorMessageAtPasswordField(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="42000600">042ms</td>
+              <td class="duration" data-value="42000600">042ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">stepDefinitions.RegisterStepDefinitions.verifySuccessRegister()</td>
+              <td>1</td>
+              <td class="duration" data-value="42001100">042ms</td>
+              <td class="duration" data-value="42001100">042ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>15</td>
+            <td>44</td>
+            <td class="duration">39s 306ms</td>
+            <td class="duration">893ms</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
